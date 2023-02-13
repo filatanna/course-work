@@ -36,7 +36,7 @@ public class Main {
     }
 
     private static Employee minSalary() {
-        int min = 90000;
+        int min = Integer.MAX_VALUE;
         Employee employee = null;
         for (Employee employee1 : EMPLOYEES) {
             if (employee1.getSalary() < min) {
@@ -59,7 +59,7 @@ public class Main {
         return employee;
     }
     private static double averageSalary(){
-        double average = summaSalary()/ EMPLOYEES.length;
+        double average = summaSalary()/ (double)EMPLOYEES.length;
         return average;
     }
     private static void printName(){
